@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+1 vi /etc/init.d/php-fpm
+2 更改路劲
+php_fpm_BIN=/usr/local/php/sbin/php-fpm
+php_fpm_CONF=/etc/php-fpm/php-fpm.conf
+php_fpm_PID=/var/run/php-fpm.pid
+
+
+
+2cd /usr/local/src/php-7.4.1
+
+4 cd sapi/
+
+
+5cd fpm/
+
+6mkdir /etc/php-fpm
+
+7cp php-fpm.conf.in /etc/php-fpm/php-fpm.conf
+
+
+8/etc/init.d/php-fpm start
+
+9cp www.conf.in /etc/php-fpm/www.conf
+
+
+10vim /etc/php-fpm/php-fpm.conf
+11include=/etc/php-fpm/conf/*.conf
+
+12mkdir /etc/php-fpm/conf
+
+13mv /etc/php-fpm/www.conf /etc/php-fpm/conf/
+
+14vim /etc/php-fpm/conf/www.conf 
+user = www
+group = www
+15 /etc/init.d/php-fpm start
+
+16  vim /etc/php-fpm/conf/www.conf
+user = www
+group = www
+17 /etc/init.d/php-fpm start
+
+18 useradd www
+
+19/etc/init.d/php-fpm start

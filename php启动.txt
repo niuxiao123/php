@@ -1,0 +1,8 @@
+  cp php.ini-production /usr/local/php/lib/php.ini
+cp php-fpm.conf.default php-fpm.conf
+
+cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf
+
+useradd www
+
+/usr/local/php/sbin/php-fpm

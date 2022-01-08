@@ -1,0 +1,8 @@
+安装依赖  yum -y install libxml2 libxml2-devel openssl openssl-devel curl-devel libjpeg-devel libpng-devel freetype-devel bzip2-devel libmcrypt libmcrypt-devel postgresql-devel aspell-devel readline-devel libxslt-devel net-snmp-devel unixODBC-devel libicu-devel libc-client-devel libXpm-devel libvpx-devel enchant-devel openldap openldap-devel db4-devel gmp-devel sqlite-devel mysql-devel
+添加用户
+useradd -s /sbin/nologin  php
+下载php   wget https://www.php.net/distributions/php-7.4.1.tar.gz
+配置php  
+./configure --prefix=/usr/local/php7 --with-curl --with-mysqli --with-openssl --with-pdo-mysql --with-gd --enable-fpm --enable-bcmath --enable-xml --enable-zip --enable-mbstring --enable-sockets
+编译 安装
+添加环境变量
